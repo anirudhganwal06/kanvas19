@@ -1,9 +1,8 @@
-const path = require("path");
-
 module.exports = {
   entry: "./script.js",
   output: {
-    filename: "script.bundle.js"
+    filename: "script.bundle.js",
+    path: __dirname
   },
   module: {
     rules: [{
@@ -22,5 +21,5 @@ module.exports = {
       }
     ]
   },
-  mode: "development"
+  mode: "production"
 };
