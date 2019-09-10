@@ -117,7 +117,7 @@ const open = index => {
   socialIconAnim.reverse();
   socialIconAnim.play();
   target = targets[index];
-  if(window.innerWidth > 800) {
+  if(window.innerWidth > window.innerHeight) {
     anime({
       targets: target.id,
       translateX: { value: '50vw', duration: 0 },
@@ -177,7 +177,7 @@ const close = () => {
     duration: 250,
     easing: 'easeOutCirc'
   });
-  if (window.innerWidth < 800)
+  if (window.innerWidth < window.innerHeight)
     document.querySelector(target.icon).style.display = 'block';
   document.querySelector(target.id).style.zIndex = '0';
   document.getElementById('title').style.display = 'block';
