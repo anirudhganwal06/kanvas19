@@ -2,6 +2,25 @@ body {
     background: rgb(31, 29, 29);
     margin: 0;
     overflow: hidden;
+	width: 100%;
+	height: 100vh;
+	font-family: "Exo", sans-serif;
+	color: #fff;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .circle {
@@ -11,20 +30,9 @@ body {
     position: absolute;
     top: calc(50% - 2em);
     left: calc(50% - 2em);
+    background-color: white;
+    cursor: pointer;
 }
-
-#circle1 {
-    background-color: rgb(166, 57, 255);
-}
-
-#circle2 {
-    background-color: rgb(255, 57, 74);
-}
-
-#circle3 {
-    background-color: rgb(105, 218, 111);
-}
-
 
 #title {
     position: absolute;
@@ -33,7 +41,7 @@ body {
     transform: translate(-52.5%, -50%);
     width: 50%;
     white-space: pre;
-    color: rgb(247, 234, 52);
+    color: white;
 }
 
 .social-icons {
@@ -54,7 +62,7 @@ body {
 }
 
 .corner-logo {
-    background: rgb(247, 234, 52);
+    background: white;
     width: 40px;
     height: 40px;
     border-radius: 10px;
@@ -62,8 +70,15 @@ body {
     z-index: 3;
 }
 
+#gawds-logo {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    height: 1.5em;
+}
+
 .close {
-    color: #fff;
+    color: #e84775;
     font-size: 2em;
     position: absolute;
     left: 2%;
@@ -74,10 +89,10 @@ body {
 }
 
 .event-icon {
-    width: 35px;
+    width: 2em;
     position: relative;
-    top: calc(50% - 17px);
-    left: calc(50% - 17px);
+    top: calc(50% - 1em);
+    left: calc(50% - 1em);
     opacity: 0;
 }
 
@@ -86,23 +101,22 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 50vw;
     height: 100vh;
     box-sizing: border-box;
-    padding: 5% 10%;
+    padding: 3% 3% 3% 5%;
     z-index: 3;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 .heading {
     margin-top: 30px;
     font-weight: 200;
     font-size: 1.8em;
-    color: white;
+    color: #e84775;
     font-family: Raleway;
     text-transform: uppercase;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.3em;
 }
 
 .heading .letter {
@@ -112,14 +126,20 @@ body {
 
 .content {
     font-family: 'Roboto', sans-serif;
-    color: #fff;
-    font-size: 1em;
+    color: #e84775;
+    font-size: 0.9em;
 }
 
 @media (max-width: 800px) {
     #title {
         top: 40%;
         width: 110vw;
+    }
+
+    .event-details {
+        width: 100vw;
+        overflow: auto;
+        padding: 3% 10%;
     }
 
     .heading {
