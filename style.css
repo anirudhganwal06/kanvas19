@@ -61,7 +61,7 @@ body {
     color: rgb(247, 234, 52);
 }
 
-.corner-logo {
+#corner-logo {
     background: white;
     width: 40px;
     height: 40px;
@@ -99,10 +99,11 @@ body {
 .event-details {
     display: none;
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
     width: 50vw;
-    height: 100vh;
+    height: max-content;
     box-sizing: border-box;
     padding: 3% 3% 3% 5%;
     z-index: 3;
@@ -110,6 +111,7 @@ body {
 }
 
 .heading {
+    text-align: center;
     margin-top: 30px;
     font-weight: 200;
     font-size: 1.8em;
@@ -128,6 +130,8 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #e84775;
     font-size: 0.9em;
+    text-align: center;
+    justify-content: center;
 }
 
 @media (max-width: 800px) {

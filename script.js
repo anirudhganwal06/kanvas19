@@ -83,7 +83,7 @@ const socialIconAnim = anime({
 
 //corner-logo square to circle
 anime({
-  targets: '.corner-logo',
+  targets: '#corner-logo',
   borderRadius: ['0%', '50%'],
   easing: 'easeInOutQuad',
   loop: true,
@@ -146,6 +146,7 @@ const open = index => {
     });
     document.querySelector(target.icon).style.display = 'none';
   }
+  document.getElementById('corner-logo').style.background = '#e84775';
   document.getElementById('title').style.display = 'none';
   document.querySelector('.close').style.display = 'block';
   document.querySelector(target.div).style.display = 'block';
@@ -179,6 +180,7 @@ const close = () => {
   });
   if (window.innerWidth < window.innerHeight)
     document.querySelector(target.icon).style.display = 'block';
+  document.getElementById('corner-logo').style.background = '#fff';
   document.querySelector(target.id).style.zIndex = '0';
   document.getElementById('title').style.display = 'block';
   document.querySelector('.close').style.display = 'none';
