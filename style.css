@@ -1,178 +1,195 @@
 html {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: rgb(31, 29, 29);
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-	width: 100%;
-	height: 100%;
-	font-family: "Exo", sans-serif;
-	color: #fff;
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 5000%;
-	animation: gradientBG 15s ease infinite;
+  background: rgb(31, 29, 29);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  font-family: "Exo", sans-serif;
+  color: #fff;
+  background: linear-gradient(-45deg, #005d8c, #99009c);
+  background-size: 400% 5000%;
+  animation: gradientBG 20s ease infinite;
 }
 
 @keyframes gradientBG {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#circle1 {
+    display: none;
 }
 
 .circle {
-    width: 4em;
-    height: 4em;
-    border-radius: 50%;
-    position: absolute;
-    top: calc(50% - 2em);
-    left: calc(50% - 2em);
-    background-color: white;
-    cursor: pointer;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 2em);
+  left: calc(50% - 2em);
+  cursor: pointer;
+  z-index: 1;
+  animation: circleColor 20s ease infinite;
+}
+
+@keyframes circleColor {
+  0% {
+    background-color: #005d8c;
+  }
+  50% {
+    background-color: #99009c;
+  }
+  100% {
+    background-color: #005d8c;
+  }
 }
 
 #title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-52.5%, -50%);
-    width: 50%;
-    white-space: pre;
-    color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-52.5%, -50%);
+  width: 50%;
+  white-space: pre;
+  color: white;
 }
 
 .social-icons {
-    position: absolute;
-    top: 80%;
-    left: 2%;
-    z-index: 3;
+  position: absolute;
+  top: 80%;
+  left: 2%;
+  z-index: 3;
 }
 
 .social-icon {
-    color: #fff;
-    font-size: 1.5em;
-    padding: 10px;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 10px;
 }
 
 .social-icon:hover {
-    color: rgb(247, 234, 52);
+  color: rgb(247, 234, 52);
 }
 
 #corner-logo {
-    background: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    margin: 20px;
-    /* padding: 20px; */
-    z-index: 3;
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 20px;
+  /* padding: 20px; */
+  z-index: 3;
 }
 
 #gawds-logo {
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    height: 1.5em;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  height: 1.5em;
 }
 
 .close {
-    color: #e84775;
-    font-size: 2em;
-    position: absolute;
-    left: 2%;
-    display: none;
-    cursor: pointer;
-    font-weight: 900;
-    z-index: 4;
+  color: #fff;
+  font-size: 2em;
+  position: absolute;
+  left: 2%;
+  display: none;
+  cursor: pointer;
+  font-weight: 900;
+  z-index: 4;
 }
 
 .event-icon {
-    width: 2em;
-    position: relative;
-    top: calc(50% - 1em);
-    left: calc(50% - 1em);
-    opacity: 0;
+  width: 2em;
+  position: relative;
+  top: calc(50% - 1em);
+  left: calc(50% - 1em);
+  opacity: 0;
 }
 
 .event-details {
-    display: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 50vw;
-    height: max-content;
-    box-sizing: border-box;
-    padding: 3% 3% 3% 5%;
-    z-index: 3;
-    overflow: hidden;
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 50vw;
+  height: max-content;
+  box-sizing: border-box;
+  padding: 3% 3% 3% 5%;
+  z-index: 3;
+  overflow: hidden;
 }
 
 .heading {
-    text-align: center;
-    margin-top: 30px;
-    font-weight: 200;
-    font-size: 1.8em;
-    color: #e84775;
-    font-family: Raleway;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 200;
+  font-size: 1.8em;
+  color: #fff;
+  font-family: Raleway;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
 }
 
 .heading .letter {
-    display: inline-block;
-    line-height: 1em;
+  display: inline-block;
+  line-height: 1em;
 }
 
 .content {
-    font-family: 'Roboto', sans-serif;
-    color: #e84775;
-    font-size: 0.9em;
-    text-align: center;
-    justify-content: center;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-size: 0.9em;
+  text-align: center;
+  justify-content: center;
 }
 
 #main-content {
-    position: absolute;
-    font-size: 1em;
-    top: 40%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    width: 80%;
+  position: absolute;
+  font-size: 1em;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  width: 80%;
 }
 
 @media (max-width: 800px) {
-    #title {
-        top: 40%;
-        width: 110vw;
-    }
+  #title {
+    top: 40%;
+    width: 110vw;
+  }
 
-    .event-details {
-        width: 100vw;
-        overflow: auto;
-        padding: 3% 10%;
-    }
+  .event-details {
+    width: 100vw;
+    overflow: auto;
+    padding: 3% 10%;
+  }
 
-    .heading {
-        font-size: 1.5em;
-        letter-spacing: 0.2em;
-    }
+  .heading {
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+  }
 
-    .content {
-        font-size: 0.8em;
-    }
+  .content {
+    font-size: 0.8em;
+  }
 
-    #main-content {
-        top: 20%;
-    }
+  #main-content {
+    top: 20%;
+  }
 }

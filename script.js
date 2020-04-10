@@ -3,13 +3,13 @@ import "./style.css";
 
 let circle = [];
 if (window.innerHeight < window.innerWidth) {
-  circle[0] = { x: "calc(50vw - 4.8em)", y: 0 };
-  circle[1] = { x: "calc(50vw - 4.8em)", y: "110%" };
-  circle[2] = { x: "calc(50vw - 4.8em)", y: "220%" };
+  circle[0] = { x: "calc(50vw - 4.8em)", y: "0" };
+  circle[1] = { x: "calc(50vw - 4.8em)", y: "-60%" };
+  circle[2] = { x: "calc(50vw - 4.8em)", y: "+60%" };
 } else {
   circle[0] = { x: 0, y: "20vh" };
-  circle[1] = { x: "-110%", y: "20vh" };
-  circle[2] = { x: "110%", y: "20vh" };
+  circle[1] = { x: "-60%", y: "40vh" };
+  circle[2] = { x: "60%", y: "40vh" };
 }
 
 let t1 = anime.timeline({
@@ -73,12 +73,13 @@ anime({
 }).finished.then(() => {
   document.getElementById("title").style.transition = "1s";
   document.getElementById("title").style.transform = "translate(-52.5%, 0%)";
-  document.getElementById("main-content").style.transition = '1s';
+  document.getElementById("main-content").style.transition = "1s";
   document.getElementById("main-content").style.transitionDelay = "1s";
   document.getElementById("main-content").style.opacity = 1;
   if (window.innerWidth > 800) {
     document.getElementById("title").style.top = "0";
-    document.getElementById("title").style.transform = "translate(-52.5%, 0%) scale(0.75)";
+    document.getElementById("title").style.transform =
+      "translate(-52.5%, 0%) scale(0.75)";
   } else {
     document.getElementById("title").style.top = "50px";
     document.getElementById("title").style.width = window.innerWidth * 0.8;
@@ -203,7 +204,11 @@ const close = () => {
   document.querySelector(target.div).style.display = "none";
 };
 
-const icons = ["#circle1", "#circle2", "#circle3"];
+const icons = [
+  "#circle1",
+  "#circle2",
+  "#circle3",
+];
 icons.forEach(
   (icon, index) => (document.querySelector(icon).onclick = () => open(index))
 );
