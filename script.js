@@ -74,6 +74,7 @@ anime({
   document.getElementById("title").style.transition = "1s";
   document.getElementById("title").style.transform = "translate(-52.5%, 0%)";
   document.getElementById("main-content").style.transition = '1s';
+  document.getElementById("main-content").style.transitionDelay = "1s";
   document.getElementById("main-content").style.opacity = 1;
   if (window.innerWidth > 800) {
     document.getElementById("title").style.top = "0";
